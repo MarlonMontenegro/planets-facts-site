@@ -1,0 +1,71 @@
+@import "src/styles/_variables.sass"
+
+
+/* ============================
+           MIXINS
+   ============================ */
+
+@mixin lineTopHover($color)
+  border-top: 3.5px solid $color
+  padding-top: 2.8rem
+
+@mixin flexDirectionRow
+  display: flex
+  flex-direction: row
+
+/* ============================
+           CLASSES
+   ============================ */
+
+header
+  color: $primary-white
+  padding: 2rem 2.2rem 1rem
+  border-bottom: 1px solid $primary-grey
+
+.navBar
+  @include flexDirectionRow
+  justify-content: space-between
+
+
+.navbar-left-side h2
+  font-family: $spartan-family-font-titles
+  font-weight: $h2-font-weight
+  font-size: $h2-font-size
+  line-height: $h2-line-height
+  letter-spacing: $h2-letter-spacing
+
+.navbar-right-side ul
+  @include flexDirectionRow
+  gap: 1rem
+  color: $primary-grey
+  font-weight: 700
+  font-family: $spartan-family-font-titles
+
+
+.mercury, .venus, .earth, .mars, .jupiter, .saturn, .uranus, .neptune
+  transition: border-top 1ms ease
+
+.mercury:hover
+  @include lineTopHover($mercury-primary-color)
+
+.venus:hover
+  @include lineTopHover($venus-primary-color)
+
+.earth:hover
+  @include lineTopHover($earth-primary-color)
+
+.mars:hover
+  @include lineTopHover($mars-primary-color)
+
+.jupiter:hover
+  @include lineTopHover($jupiter-primary-color)
+
+.saturn:hover
+  @include lineTopHover($saturn-primary-color)
+
+.uranus:hover
+  @include lineTopHover($uranus-primary-color)
+
+.neptune:hover
+  @include lineTopHover($neptune-primary-color)
+
